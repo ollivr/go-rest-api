@@ -4,12 +4,10 @@ package main
 import (
 	"log"
 	"net/http"
-	"restful-api/internal/routes"
+	"restful-api/internal/handlers"
 )
 
 func main() {
-	router := routes.HandleRequests()
-
+	router := handlers.HandleRequests()
 	log.Fatal(http.ListenAndServe(":10000", router))
-
 }
